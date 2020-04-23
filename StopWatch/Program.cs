@@ -9,27 +9,17 @@ namespace StopWatch
         {
             var stopwatch = new StopWatch();
 
-
             Console.WriteLine("This is a StopWatch application");
             Console.WriteLine("Press 'space' to start and stop, 'ESC to quit'");
             Console.WriteLine();
 
-
             while ((Console.ReadKey().Key != ConsoleKey.Escape) || (Console.ReadKey().Key == ConsoleKey.Spacebar))
             {
                 if (stopwatch.MeasurementStarted == false)
-                {
                     stopwatch.Start();
-                }
-                else if (stopwatch.MeasurementStarted == true)
-                {
-                    stopwatch.Stop();
-                }
                 else
-                    throw new InvalidOperationException();     
+                    stopwatch.Stop();
             }
-
-
         }
     }
 }
